@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #ddd;
+}
+
+html,
+body,
+a,
+button {
+  cursor: none;
+}
+a {
+  color: white;
+}
+button {
+  padding: 10px;
+}
+
+main {
+  height: 200vh;
+  padding-top: 90vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.cursor,
+.follower {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  pointer-events: none;
+}
+.cursor.\:stalker-active {
+  background-color: #000;
+}
+.follower {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: transform linear 0.2s, width ease 0.1s, height ease 0.1s;
+}
+.follower.\:stalker-active {
+  width: 120px;
+  height: 120px;
+}
